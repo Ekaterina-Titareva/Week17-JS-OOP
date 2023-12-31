@@ -316,33 +316,72 @@ console.log(employee2.calculateBonus(10));
 //Подсказка: Используйте методы класса, чтобы создать объект product и вывести его свойства.
 
 //Ваш код
+class Product {
+	constructor(name, price, quantity) {
+		this.name = name;
+		this.price = price;
+		this.quantity = quantity;
+}
+}
+
+const product = new Product("Example Product", 11, 3);
+console.log(product);
 
 //Задание 26
 //Добавьте в класс Product метод calculateTotalPrice, который будет возвращать общую стоимость продукта (произведение цены на количество). 
 //Создайте объект product2 на основе класса Product с ценой 10 и количеством 5. Выведите общую стоимость продукта в консоль с помощью метода calculateTotalPrice.
 
 //Ваш код
-
+Product.prototype.calculateTotalPrice = function(){
+	return this.price * this.quantity;
+}
+const product2 = new Product("Product", 10, 5);
+console.log(product2.calculateTotalPrice());
 //Задание 27
 //Создайте класс Triangle. Класс должен содержать свойства side1, side2 и side3, которые представляют длины сторон треугольника. 
 //Создайте на его основе объект triangle и выведите его свойства в консоль.
 
 //Ваш код
-
+class Triangle {
+	constructor(side1, side2, side3) {
+		this.side1 = side1;
+		this.side2 = side2;
+		this.side3 = side3;
+}
+}
+const triangle = new Triangle();
+console.log(triangle);
 //Задание 28
 //Добавьте в класс Triangle метод calculatePerimeter, который будет возвращать периметр треугольника (сумма длин всех сторон). 
 //Создайте объект triangle2 на основе класса Triangle со сторонами 3, 4 и 5. Выведите периметр треугольника в консоль с помощью метода calculatePerimeter.
 
 //Ваш код
+Triangle.prototype.calculatePerimeter = function(){
+	return this.side1 + this.side2 + this.side3;
+}
 
+const triangle2 = new Triangle(3, 4, 5);
+console.log(triangle2.calculatePerimeter());
 //Задание 29
 //Создайте класс Square. Класс должен содержать свойство side, представляющее длину стороны квадрата. 
 //Создайте на его основе объект square и выведите его свойство в консоль.
 
 //Ваш код
-
+class Square {
+	constructor(side) {
+		this.side = side;
+}
+}
+const square = new Square();
+console.log(square);
 //Задание 30
 //Добавьте в класс Square метод calculateArea, который будет вычислять и возвращать площадь квадрата (произведение длины стороны на саму себя). 
 //Создайте объект square2 на основе класса Square со стороной 5 и выведите его площадь квадрата в консоль с помощью метода calculateArea.
 
 //Ваш код
+Square.prototype.calculateArea = function(){
+	return this.side * this.side;
+}
+
+const square2 = new Square(5);
+console.log(square2.calculateArea());
