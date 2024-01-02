@@ -1,0 +1,36 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.title {
+font-size: 42px;
+font-weight: 700;
+text-align: center;
+margin-bottom: 16px;
+text-shadow: 5px 5px rgba(0, 255, 94, 0.434);
+}
+
+.container {
+display: grid;
+margin: 0 10%;
+grid-template-columns: 1fr 1fr;
+justify-items: center;
+gap: 10px;
+}
+
+img {
+    width: 300px;
+    height: 160px;
+}
+
+p {
+margin: 5px;
+}
+
+@media(max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }   
+}

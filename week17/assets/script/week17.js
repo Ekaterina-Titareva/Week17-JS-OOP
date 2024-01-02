@@ -309,7 +309,9 @@ Employee.prototype.calculateBonus = function(percent){
 	return this.salary * (1 + percent);
 }
 const employee2 = new Employee("Ann", "Developer", 5000)
-console.log(employee2.calculateBonus(10));
+console.log(employee.calculateBonus.call(employee2, 10));
+console.log(employee.calculateBonus.apply(employee2, [10]));
+
 //Задание 25
 //Создайте класс Product. Класс должен содержать свойства name, price и quantity. 
 //Создайте на его основе объект product и выведите его свойства в консоль.
